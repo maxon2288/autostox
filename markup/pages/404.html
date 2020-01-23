@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    <div class="n404">
+        <div class="wrapper">
+            <div class="n404__container">
+                <div class="n404__top">
+                    <div class="n404__logo wow fadeIn" data-wow-delay="0.2s">
+                        {{Icon iconName="logo-1"}}
+                    </div>
+                </div>
+
+                <div class="n404__content">
+                    <div class="n404__left">
+                        <div class="n404__title wow fadeIn" data-wow-delay="0.4s">
+                                404
+                        </div>
+                        <div class="n404__desc wow fadeIn" data-wow-delay="0.6s">
+                                Возможно, вы воспользовались недействительной ссылкой или страница была удалена.
+                        </div>
+                        <a href="index.html" class="n404__button wow fadeIn" data-wow-delay="0.8s">На главную</a>
+                    </div>
+                    <div class="n404__right wow fadeIn" data-wow-delay="1.5s"> 
+                        {{Icon iconName="404-car"}}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    {{> scripts/scripts}}
+    
+</body>
+</html>

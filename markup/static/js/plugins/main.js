@@ -42,6 +42,178 @@ $(document).ready(function () {
 		$(this).css("background-image", "url(" + img + ")");
 	});
 
+	
+	$(document).on('click', '.number-input-container .number-increment', function(e) {
+        let $input = $(this).siblings('.number-input'),
+            val = parseInt($input.val()),
+            max = parseInt($input.attr('max')),
+            step = parseInt($input.attr('step'));
+		let temp = val + step;
+		$input.val(temp <= max ? temp : max);
+		$(this).closest(".number-input-container").find(".number-result").text($input.val());
+    });
+    $(document).on('click', '.number-input-container .number-decrement', function(e) {
+        let $input = $(this).siblings('.number-input'),
+            val = parseInt($input.val()),
+            min = parseInt($input.attr('min')),
+            step = parseInt($input.attr('step'));
+		let temp = val - step;
+		$input.val(temp >= min ? temp : min);
+		$(this).closest(".number-input-container").find(".number-result").text($input.val());
+    });
+	
+
+	$('.starrr').starrr({
+		rating: 4
+	  })
+
+	  if ($(window).width() > 769) {
+		$(".sticky-block").stick_in_parent();
+	}
+
+	if ($('#slider').length > 0) {
+		var slider = document.getElementById('slider');
+		var rangeMin = +$("#slider").attr("data-min")
+		var rangeMax = +$("#slider").attr("data-max")
+
+		var valMin = +$(".input-min").val();
+		var valMax = +$(".input-max").val();
+		
+		var rangeStep = $("#slider").data("step")
+		$(".output-left").text(parseFloat(valMin).toFixed(0));
+		$(".output-right").text(parseFloat(valMax).toFixed(0));
+		// $(".input-min").text(parseFloat(rangeMin).toFixed(0));
+		noUiSlider.create(slider, {
+			start: [valMin, valMax],
+			connect: true,
+			step: rangeStep,
+			range: {
+				'min': rangeMin,
+				'max': rangeMax
+			},
+			format: wNumb({
+				decimals: 0
+			})
+			
+		});	
+
+		if ($(window).width() > 769) {
+			$(".sticky-block").stick_in_parent();
+		}
+
+		$(".filter__open").click(function() {
+			$(".filter__container").addClass("active");
+			$(".overlay").addClass("visible")
+		});
+
+		$(".filter__close-mobile, .overlay").click(function() {
+			$(".filter__container").removeClass("active");
+			$(".overlay").removeClass("visible")
+		});
+
+	
+		// $(".noUi-handle-touch-area").mousemove(function() {
+		// 	var val = $(this).find("span").text();
+		// 	$(".output-left").text(parseFloat(val).toFixed(0));
+		// 	$(".input-min").val(parseFloat(val).toFixed(0));
+		// });
+		// $(".noUi-handle-touch-area").mousemove(function() {
+		// 	var val = $(this).find("span").text();
+		// 	$(".output-right").text(parseFloat(val).toFixed(0));
+		// 	$(".input-max").val(parseFloat(val).toFixed(0));
+		// });
+
+
+		slider.noUiSlider.on('slide', function () { 
+			$(".noUi-handle-lower").each(function() {
+				var val = +$(this).find("span").text();
+				$(this).find("span").text(val.toFixed(0))
+				console.log(val, 1);
+				$(".filter-output-min").text(val.toFixed(0));
+			});
+		});
+		slider.noUiSlider.on('slide', function () { 
+			$(".noUi-handle-upper").each(function() {
+				var val = +$(this).find("span").text();
+				$(this).find("span").text(val.toFixed(0))
+				console.log(val, 1);
+				$(".filter-output-max").text(val.toFixed(0));
+			});
+		});
+
+	}
+
+	$(".faq__body").each(function() {
+		var height = $(this).height();
+		$(this).css("height", 0);
+		$(this).attr("data-height", height)
+	});
+
+	$(".ymap").each(function(e){
+        var ya = this;
+        var myMap;
+        ymaps.ready(
+            function() {
+                var x = $(ya).attr("data-x");
+                var y = $(ya).attr("data-y");
+                    myMap = new ymaps.Map($(ya)[0], {
+                        center: [x , y],
+                        zoom: 13,
+                        controls: []
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    });
+            
+                    var myPlacemark = new ymaps.Placemark([x, y], {},
+                { iconLayout: 'default#image',
+                iconImageHref: 'static/img/content/marker.svg',
+                iconImageSize: [37, 37], });    
+            
+                myMap.geoObjects.add(myPlacemark);
+            }
+        );
+	})
+	
+	new WOW().init();
+
+	$(".faq__header").click(function() {
+		var body = $(this).closest(".faq__item").find(".faq__body");
+		var header = $(this);
+		if(header.hasClass("active")) {
+			header.removeClass("active");
+			var height = body.height();
+			body.attr("data-height", height);
+			body.height(0);
+			body.removeClass("active");
+		} else {
+			header.addClass("active");
+			var height = body.attr("data-height");
+			body.height(height);
+		}
+	});
+
+	$(".noUi-handle-lower").each(function() {
+		var val = +$(this).find("span").text();
+		$(this).find("span").text(val.toFixed(0))
+		console.log(val, 1);
+		$(".filter-output-min").text(val.toFixed(0));
+	});
+	$(".noUi-handle-upper").each(function() {
+		var val = +$(this).find("span").text();
+		$(this).find("span").text(val.toFixed(0))
+		console.log(val, 1);
+		$(".filter-output-max").text(val.toFixed(0));
+	});
+
+	$(".catalog__row-button").click(function() {
+		$(".catalog__row-button").removeClass("active");
+		$(this).addClass("active");
+	});
+
+	$(".html > img").each(function() {
+		$(this).wrap("<figure></figure>")
+	});
+
 	$('.form').each(function() {
         var it = $(this);
          it.validate({

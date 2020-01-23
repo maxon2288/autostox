@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    {{> header/header}}
+    {{> header/bottom}}
+    {{> bread/bread}}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="container__container">
+                <div class="container__title-2">
+                        Cтатьи
+                </div>
+
+                <div class="news__items">
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                    {{> newsItem/newsItem}}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    {{> pag/pag}}
+
+
+    {{> subs/subs}}
+    {{> footer/footer}}
+    
+</body>
+</html>

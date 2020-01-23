@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    {{> header/header}}
+    {{> header/bottom}}
+    {{> bread/bread}}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="container__container">
+                <div class="container__title">
+                        Контакты
+                </div>
+
+                <div class="contacts">
+                    <div class="contacts__left">
+                        <div class="contacts__item">
+                            <div class="contacts__img">
+                                {{Icon iconName="contacts-1"}}
+                            </div>
+                            <div class="contacts__desc">
+                                    Главный офис: 109240, г.Москва Угрешская д2
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <div class="contacts__img">
+                                {{Icon iconName="contacts-2"}}
+                            </div>
+                            <div class="contacts__desc">
+                                    Номер телефона:
+                                    8 800 451 56 78
+                            </div>
+                        </div>
+                        <div class="contacts__item">
+                            <div class="contacts__img">
+                                {{Icon iconName="contacts-3"}}
+                            </div>
+                            <div class="contacts__desc">
+                                    Электронная почта:
+                                    info@autostox.ru
+                            </div>
+                        </div>
+
+                        <div class="contacts__soc">
+                            <div class="contacts__soc-title">
+                                    Мы в социальных сетях: 
+                            </div>
+                            <div class="contacts__soc-content">
+                                <a href="#">
+                                    {{Icon iconName="footer-vk"}}
+                                </a>
+                                <a href="#">
+                                    {{Icon iconName="footer-inst"}}
+                                </a>
+                                <a href="#">
+                                    {{Icon iconName="footer-youtube"}}
+                                </a>
+                                <a href="#">
+                                    {{Icon iconName="footer-fb"}}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contacts__button">
+                                Получить консультацию
+                        </div>
+                        
+                    </div>
+
+                    <div class="contacts__right">
+                        <div class="ymap" id="ya" data-x="55.234774" data-y="61.437345"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    {{> footer/footer}}
+    
+</body>
+</html>

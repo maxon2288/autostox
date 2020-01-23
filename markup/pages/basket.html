@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    {{> header/header}}
+    {{> header/bottom}}
+    {{> bread/bread}}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="container__container">
+                <div class="container__title">
+                    Корзина
+                </div>
+
+                <div class="basket">
+                    <div class="basket__top">
+                        <label class="m-check">
+                            <input type="checkbox">
+                            <div>
+                                {{Icon iconName="check"}}
+                            </div>
+                            <p>
+                                Выбрать все
+                            </p>
+                        </label>
+
+                        <a href="#" class="basket__top-link">
+                            Удалить выбранные
+                        </a>
+                        
+                    </div>
+
+                    <div class="basket__content">
+                        <div class="basket__table"> 
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>№</th>
+                                    <th>Товар</th>
+                                    <th>Количество</th>
+                                    <th>Цена  ₽</th>
+                                    <th>Сумма  ₽</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="basket__td-row">
+                                            <label class="m-check">
+                                                <input type="checkbox">
+                                                <div>
+                                                    {{Icon iconName="check"}}
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="basket__td-row">
+                                            <div class="basket__number">
+                                                1
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="basket__item">
+                                            <div class="basket__img m-bg-cont">
+                                                <img src='static/img/content/basket-1.jpg'>
+                                            </div>
+                                            <div class="basket__item-content">
+                                                <div class="basket__item-title">
+                                                        Чехлы из экокожи «GTR PREMIUM» Красные H&R (Hadar Rosen)
+                                                </div>
+                                                <span>
+                                                        Марка авто: Для Audi A3 1996 - 2003 г. 8L 3дв 
+                                                </span>
+                                                <span>Артикул: 7943765</span>
+                                                <span>Цвет: Красный</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>lorelroelreo</td>
+                                    <td>lorelroelreo</td>
+                                    <td>lorelroelreo</td>
+                                    <td>lorelroelreo</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    {{> subs/subs}}
+    {{> footer/footer}}
+    
+</body>
+</html>
