@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    {{> header/header}}
+    {{> header/bottom}}
+    {{> bread/bread}}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="container__container">
+                <form action="#" class="room">
+                    <div class="room__top">
+                        
+                        <div class="room__top-left">
+                            <div class="room__top-title">
+                                    Алексей Петров
+                            </div>
+                            <a href="edit-profile.html" class="room__edit">
+                                {{Icon iconName="edit"}}
+                                Редактировать профиль
+                            </a>  
+
+                            <div class="room__button">Связаться с менеджером</div>
+                            
+                        </div>
+
+                        <div class="room__right">
+                            <div class="room__title">
+                                    350 Б
+                            </div>
+                            <div class="room__desc">
+                                    бонусных <br>
+                                    баллов
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="room__content">
+                        <div class="room__content-left">
+                            <div class="room__edit-items">
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                        Имя
+                                    </div>
+                                    <input type="text" class="m-field" value="Олег">
+                                </div>
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                            Электронная почта   
+                                    </div>
+                                    <input type="text" class="m-field" value="Москва">
+                                </div>
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                            Фамилия
+                                    </div>
+                                    <input type="text" class="m-field" value="Дантевский">
+                                </div>
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                            Дата рождения
+                                    </div>
+                                    <input type="text" class="m-field" value="123456">
+                                </div>
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                            Отчество
+                                    </div>
+                                    <input type="text" class="m-field" value="Николаевич">
+                                </div>
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                            Пароль
+                                    </div>
+                                    <div class="room__edit-button">
+                                            Сменить пароль
+                                    </div>
+                                </div>
+                                <div class="room__edit-item">
+                                    <div class="order__item-title">
+                                            Номер телефона
+                                    </div>
+                                    <input type="text" class="m-field phone-mask" value="+7 123 3652 26 15">
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="room__content-right">   
+                            <a href="#">Выйти из аккаунта</a>
+                            <a href="#">Помощь</a>
+                        </div>
+                    </div>
+
+                    <div class="room__save">
+                        <button class="m-button">Сохранить изменения</button>
+                        <a href="room.html" class="m-button-grey">
+                                Назад в личный кабинет
+                        </a>
+                    </div>
+                    
+
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="bottom">
+        {{> subs/subs}}
+        {{> footer/footer}}
+    </div>
+    
+</body>
+</html>

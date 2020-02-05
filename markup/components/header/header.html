@@ -3,9 +3,9 @@
         <div class="header__container">
 
             <div class="header__left">
-                <div class="header__logo">
+                <a href="index.html" class="header__logo">
                     <img src='static/img/content/logo.svg'>
-                </div>
+                </a>
                 <div class="header__city">
                     Ваш город: <span>Москва</span> {{Icon iconName="city-arrow"}}
                 </div>
@@ -19,21 +19,21 @@
                 </div>
 
                 <div class="header__contacts">
-                    <div class="header__contacts-item">
+                    <a href="tel:+74955108900" class="header__contacts-item">
                         {{Icon iconName="phone"}}
                         <span>+7 (495) 510-89-00</span>
-                    </div>
-                    <div class="header__contacts-item">
+                    </a>
+                    <a href="tg://resolve?domain=izhurkin" class="header__contacts-item">
                         {{Icon iconName="telegram"}}
                         <span>+7 (495) 510-89-00</span>
-                    </div>
+                    </a>
                 </div>
 
-                <div class="header__sign">
+                <div class="header__sign" data-popup="sign">
                     {{Icon iconName="sign"}}
                 </div>
 
-                <div class="header__basket">
+                <a href="#" class="header__basket">
                     {{Icon iconName="basket"}}
 
                     <div class="header__basket-container">
@@ -44,7 +44,7 @@
                             (корзина пуста)
                         </div>
                     </div>
-                </div>
+                </a>
                 
             </div>
             
@@ -52,3 +52,4 @@
     </div>
 </div>
 
+{{> pageNav/pageNav}}

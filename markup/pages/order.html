@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    {{> header/header}}
+    {{> header/bottom}}
+    {{> bread/bread}}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="container__container">
+                <div class="container__title">
+                    Корзина
+                </div>
+
+                <div class="order">
+                    <div class="order__left">
+                        <div class="order__title">
+                            Адрес доставки и контактная информация
+                        </div>
+
+                        <div class="order__items">
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                    Имя
+                                </div>
+                                <input type="text" class="m-field" value="Олег">
+                            </div>
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                        Город
+                                </div>
+                                <input type="text" class="m-field" value="Москва">
+                            </div>
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                        Фамилия
+                                </div>
+                                <input type="text" class="m-field" value="Дантевский">
+                            </div>
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                        Индекс
+                                </div>
+                                <input type="text" class="m-field" value="123456">
+                            </div>
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                        Отчество
+                                </div>
+                                <input type="text" class="m-field" value="Николаевич">
+                            </div>
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                        Адрес
+                                </div>
+                                <input type="text" class="m-field" value="Пушкина 3, 45 квартира">
+                            </div>
+                            <div class="order__item">
+                                <div class="order__item-title">
+                                        Номер телефона
+                                </div>
+                                <input type="text" class="m-field phone-mask" value="+7 123 3652 26 15">
+                            </div>
+
+                        </div>
+
+                        <div class="order__radio">
+                            <div class="order__radio-col">
+                                <div class="order__radio-title">
+                                    Способ доставки
+                                </div>
+                                <div class="order__radio-content">
+                                    <label class="order__radio-item m-radio">
+                                        <input type="radio" name="radio">
+                                        <diV>
+                                            {{Icon iconName="radio"}}
+                                        </diV>
+                                        <p>Почта России</p>
+                                    </label>
+                                    <label class="order__radio-item m-radio">
+                                        <input type="radio" name="radio">
+                                        <diV>
+                                            {{Icon iconName="radio"}}
+                                        </diV>
+                                        <p>СДЭК</p>
+                                    </label>
+                                    <label class="order__radio-item m-radio">
+                                        <input type="radio" name="radio" checked>
+                                        <diV>
+                                            {{Icon iconName="radio"}}
+                                        </diV>
+                                        <p>Почта России</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="order__radio-col">
+                                <div class="order__radio-title">
+                                    Способ оплаты
+                                </div>
+                                <div class="order__radio-content">
+                                    <label class="order__radio-item m-radio">
+                                        <input type="radio" name="radio1">
+                                        <diV>
+                                            {{Icon iconName="radio"}}
+                                        </diV>
+                                        <p>Банковской картой</p>
+                                    </label>
+                                    <label class="order__radio-item m-radio">
+                                        <input type="radio" name="radio1">
+                                        <diV>
+                                            {{Icon iconName="radio"}}
+                                        </diV>
+                                        <p>Электронные деньги</p>
+                                    </label>
+                                    <label class="order__radio-item m-radio">
+                                        <input type="radio" name="radio1" checked>
+                                        <diV>
+                                            {{Icon iconName="radio"}}
+                                        </diV>
+                                        <p>При получении</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+                    <div class="order__right">
+                        <div class="order__right-title">
+                            Оформить заказ
+                        </div>
+                        <div class="order__itogo">
+                            Товаров в корзине:
+                            <span>3</span>
+                        </div>
+                        <div class="order__itogo">
+                            Бонусы за покупки:
+                            <span>45</span>
+                        </div>
+                        <div class="order__itogo">
+                            Всего бонусов:
+                            <span>350</span>
+                        </div>
+                        <label class="m-check">
+                            <input type="checkbox">
+                            <div>
+                                 {{Icon iconName="check"}}
+                            </div>
+                            <p>
+                                Потратить бонусы
+                            </p>
+                        </label>
+
+                        <div class="order__price">
+                            Общая стоимость:
+                            <span>4 500 ₽</span>
+                        </div>
+
+                        <button class="order__button m-button">
+                            Оплатить
+                        </button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="bottom">
+        {{> subs/subs}}
+        {{> footer/footer}}
+    </div>
+    
+</body>
+</html>

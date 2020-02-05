@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+<body class="page" style="visibility: hidden;opacity: 0;">
+    %=symbols=%
+
+    {{> header/header}}
+    {{> header/bottom}}
+    {{> bread/bread}}
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="container__container">
+                <div class="room">
+                    <div class="room__top">
+                        
+                        <div class="room__top-left">
+                            <div class="room__top-title">
+                                    Алексей Петров
+                            </div>
+                            <a href="edit-profile.html" class="room__edit">
+                                {{Icon iconName="edit"}}
+                                Редактировать профиль
+                            </a>  
+
+                            <div class="room__button">Связаться с менеджером</div>
+                            
+                        </div>
+
+                        <div class="room__right">
+                            <div class="room__title">
+                                    350 Б
+                            </div>
+                            <div class="room__desc">
+                                    бонусных <br>
+                                    баллов
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="history__top">
+                        <div class="history__title">
+                            История заказов <span>12</span>
+                        </div>
+                        <div class="history__top-right">
+                            <div class="history__top-right-title">
+                                    Сортировать по:
+                            </div>
+                            <div class="history__top-right-button history-col active">сначала новые</div>
+                            <div class="history__top-right-button history-col-reverse">сначала старые</div>
+                        </div>
+                    </div>
+
+                    <div class="history">
+                        <div class="history__table">
+                            
+                            <div class="history__table-row history__table-row-1 ">
+                                <div class="history__cell">Номер заказа</div>
+                                <div class="history__cell">Дата и время заказа</div>
+                                <div class="history__cell">Статус</div>
+                                <div class="history__cell">Сумма ₽</div>
+                                <div class="history__cell"> </div>
+                                <div class="history__cell"> </div>
+                            </div>
+
+                            <div class="history__table-items">
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                                {{> history/history}}
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="bottom">
+        {{> subs/subs}}
+        {{> footer/footer}}
+    </div>
+    
+</body>
+</html>
