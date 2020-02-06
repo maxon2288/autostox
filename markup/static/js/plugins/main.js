@@ -14,6 +14,23 @@ $(document).ready(function () {
 		},
 	});
 
+	if ($(window).width() > 769) {
+		$(".sticky-block").stick_in_parent();
+		
+	}
+	$(".header__mobile").click(function() {
+		$(".header__right").addClass("active");
+		$(".blur").addClass("active");
+	});
+
+		
+	console.log($(window).width());
+	if ($(window).width() < 1025) {
+		console.log(110101);
+		var firstMenu = $('.first__menu').remove();
+		$(".header__right").append(firstMenu);
+	}
+
 	var swiper = new Swiper('.offers__img-slider', {
 		spaceBetween: 30,
 	});
@@ -32,10 +49,14 @@ $(document).ready(function () {
 		},
 	});
 
+	
+
 
 	$(document).ready(function() {
 		$('select').niceSelect();
 	});
+
+
 
 	$(".lightgallery").lightGallery();
 
@@ -75,6 +96,8 @@ $(document).ready(function () {
 		$(".sticky-block").stick_in_parent();
 	}
 
+
+
 	if ($('#slider').length > 0) {
 		var slider = document.getElementById('slider');
 		var rangeMin = +$("#slider").attr("data-min")
@@ -101,9 +124,7 @@ $(document).ready(function () {
 			
 		});	
 
-		if ($(window).width() > 769) {
-			$(".sticky-block").stick_in_parent();
-		}
+	
 
 		$(".filter__open").click(function() {
 			$(".filter__container").addClass("active");
@@ -285,6 +306,7 @@ $(document).ready(function () {
 				$(this).find('input[type=checkbox]').prop('checked', false);
 				$(this).find('.active').removeClass('active');
 			});
+			$(".header__right").removeClass("active");
     	}
 	});
 	
