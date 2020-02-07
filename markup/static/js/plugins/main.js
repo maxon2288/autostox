@@ -14,13 +14,23 @@ $(document).ready(function () {
 		},
 	});
 
-	if ($(window).width() > 769) {
+	if ($(window).width() < 1025) {
+		console.log(11001);
 		$(".sticky-block").stick_in_parent();
 		
 	}
 	$(".header__mobile").click(function() {
 		$(".header__right").addClass("active");
 		$(".blur").addClass("active");
+	});
+
+	$(".catalog__mobile").click(function() {
+		$(".catalog__sidebar-container, .blur").addClass('active');
+	});
+
+	$(".catalog__close").click(function() {
+		$(".catalog__sidebar-container, .blur").removeClass('active');
+		
 	});
 
 		
@@ -307,6 +317,8 @@ $(document).ready(function () {
 				$(this).find('.active').removeClass('active');
 			});
 			$(".header__right").removeClass("active");
+			$(".catalog__sidebar-container").removeClass('active');
+
     	}
 	});
 	
