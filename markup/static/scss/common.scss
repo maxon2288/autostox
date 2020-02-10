@@ -2428,6 +2428,10 @@ svg path:nth-child(23) {
     .html {
         column-count: 2;
         column-gap: 40px;
+        @media screen and (max-width: 767px) {
+            column-gap: 0;
+            column-count: 1;
+        }
     }
     &__title {
         font-style: normal;
